@@ -1,0 +1,143 @@
+BEGIN TRANSACTION;
+
+ALTER TABLE category ADD description VARCHAR (255) NULL;
+
+
+UPDATE category SET description = 'Frozen Food - Meat, Produce, Snacks, Dinners, Desserts, and other convenient meals to fill your freezer.'
+WHERE category_id = 1;
+UPDATE category SET description = 'Bakery - Bread, pies, cookies, and a variety of baked delights.'
+WHERE category_id = 3;
+UPDATE category SET description = 'Produce - Freshly picked fruits and vegetables to kickstart any recipe or enjoy on its own.'
+WHERE category_id = 4;
+UPDATE category SET description = 'Alcohol - Beers, wines, and spirits - Please drink responsibly.'
+WHERE category_id = 5;
+UPDATE category SET description = 'International - Exotic foods, snacks, and spices from all over the world.'
+WHERE category_id = 6;
+UPDATE category SET description = 'Beverages - Water, juice, soft drinks, and sports drinks to quench your thirst.'
+WHERE category_id = 7;
+UPDATE category SET description = 'Pets - Dry foods, canned foods, treats, and accessories for your furry family.'
+WHERE category_id = 8;
+UPDATE category SET description = 'Dry Goods - Cereal, pasta, rice, and other grains'
+WHERE category_id = 9;
+UPDATE category SET description = 'Personal Care - Vitamins, supplements, and other products to keep you healthy.'
+WHERE category_id = 11;
+UPDATE category SET description = 'Deli - Chicken, beef, pork, fish, and a variety of meats found on land or sea.'
+WHERE category_id = 12;
+UPDATE category SET description = 'Pantry - Sugar, spice, mix, and other essentials for any recipe.'
+WHERE category_id = 13;
+UPDATE category SET description = 'Canned Goods - Fruits, vegetables, meats, and other foods built for a long shelf-life.'
+WHERE category_id = 15;
+UPDATE category SET description = 'Dairy - milk, cheese, and other plant-based alternatives for you and your family to enjoy.'
+WHERE category_id = 16;
+UPDATE category SET description = 'Household - Office, kitchen, bathroom, and cleaning products to keep your home stocked and clean.'
+WHERE category_id = 17;
+UPDATE category SET description = 'Snacks - Chips, dips, cookies, candy, and other treats for you to endulge.'
+WHERE category_id = 19;
+
+UPDATE category SET category_name = 'Frozen' WHERE category_id = 1;
+UPDATE category SET category_name = 'Bakery' WHERE category_id = 3;
+UPDATE category SET category_name = 'Produce' WHERE category_id = 4;
+UPDATE category SET category_name = 'Alcohol' WHERE category_id = 5;
+UPDATE category SET category_name = 'International' WHERE category_id = 6;
+UPDATE category SET category_name = 'Beverages' WHERE category_id = 7;
+UPDATE category SET category_name = 'Pets' WHERE category_id = 8;
+UPDATE category SET category_name = 'Dry Goods' WHERE category_id = 9;
+UPDATE category SET category_name = 'Personal Care' WHERE category_id = 11;
+UPDATE category SET category_name = 'Deli - Meat and Seafood' WHERE category_id = 12;
+UPDATE category SET category_name = 'Pantry' WHERE category_id = 13;
+UPDATE category SET category_name = 'Canned Goods' WHERE category_id = 15;
+UPDATE category SET category_name = 'Dairy' WHERE category_id = 16;
+UPDATE category SET category_name = 'Household' WHERE category_id = 17;
+UPDATE category SET category_name = 'Snacks' WHERE category_id = 19;
+
+
+UPDATE product SET category_id = 12 WHERE product_id = 49;
+UPDATE product SET category_id = 17 WHERE product_id = 38;
+UPDATE product SET category_id = 11 WHERE product_id = 25;
+UPDATE product SET category_id = 11 WHERE product_id = 15;
+UPDATE product SET category_id = 9 WHERE product_id = 34;
+UPDATE product SET category_id = 9 WHERE product_id = 28;
+
+
+UPDATE product SET details = 'Chocolate Sandwich Cookies are a classic combination of rich cream and chocolate wafers. The cream center is sandwiched between two crispy chocolate cookies, making each treat delightfully crunchy on the outside and wonderfully soft on the inside.' WHERE product_id = 1;
+UPDATE product SET details = 'All Seasoned Salt is a blend of salt and savory spices, including paprika, black pepper, onion and garlic, with a hint of chili pepper.' WHERE product_id = 2;
+UPDATE product SET details = 'From its name to its distinctive flavor, oolong tea is all allure. Oolong tea benefits your health in a variety of ways.' WHERE product_id = 3;
+UPDATE product SET details = 'This frozen dinner features mini rigatoni pasta with tomato vodka sauce and part skim mozzarella cheese. As an added bonus, this tasty and easy Italian style dinner has 12 grams of protein per serving.' WHERE product_id = 4;
+UPDATE product SET details = 'This flavorful mix of Hatch green chiles, garlic and lime will give a true Southwest flavor to any cut of meat' WHERE product_id = 5;
+UPDATE product SET details = 'Dry noses be gone!  Whether you live in an arid climate or suffer from the dryness of winter, this blend of oils will hydrate your sinus cavities and decrease the chance of infection.' WHERE product_id = 6;
+UPDATE product SET details = 'Enjoy and Hydrate naturally with Pure Coconut water with Orange, it serves as a great source of potassium and protein.' WHERE product_id = 7;
+UPDATE product SET details = 'Russet Potatoes give you a new, easy way to enjoy the potatoes your family loves.' WHERE product_id = 8;
+UPDATE product SET details = 'Our Greek nonfat yogurt comes in single-serve cups, so you can live your life uninterrupted and enjoy them on the go.' WHERE product_id = 9;
+UPDATE product SET details = 'This traditional Italian beverage is made with real orange juice, a splash of prickly pear juice, and sparkling water.' WHERE product_id = 10;
+UPDATE product SET details = 'This delicious and unique juice blend combines sweet peach and tropical mango for a delightful flavor twist!' WHERE product_id = 11;
+UPDATE product SET details = 'Three layers of moist cake topped with creamy icing is like a slice of heaven. Knowing it is as close as your freezer... well, that is even better.' WHERE product_id = 12;
+UPDATE product SET details = 'Simply Saline Nasal Mist delivers instant congestion relief any time, day or night. Featuring an effective and drug-free formula.' WHERE product_id = 13;
+UPDATE product SET details = 'Dishwasher Cleaner helps eliminate odors and break through the buildup to reveal a fresher, cleaner machine.' WHERE product_id = 14;
+UPDATE product SET details = 'It’s thick and rich like hot fudge, with a not-too-overpowering kick of mint. Goes perfect on plain vanilla ice cream.' WHERE product_id = 16;
+UPDATE product SET details = 'Better than butter. It is more comparable to olive oil than animal fats with a succulent and distinctive flavor rich in mono-unsaturated fats, which reduce cholesterol.' WHERE product_id = 17;
+UPDATE product SET details = 'Calm mealtime chaos with the pizza the whole family loves! One bite into this pepperoni pizza and you will savor the zesty tomato sauce, 100% real cheese, and hearty toppings.' WHERE product_id = 18;
+UPDATE product SET details = 'Our most absorbent diaper, Overnites are designed to help keep your baby sleeping longer. ' WHERE product_id = 15;
+UPDATE product SET details = 'Try the indulgent great taste and healthfulness of Urbane Grain Three Cheese & Mushroom Quinoa. It features the goodness of todays healthiest grain, quinoa.' WHERE product_id = 19;
+UPDATE product SET details = 'INSPIRE YOUR BODY WITH THE ENTICING MIX OF POMEGRANATE AND CRANBERRY TO BRIGHTEN YOUR DAY.' WHERE product_id = 20;
+UPDATE product SET details = 'Dental Dog Treats are the mouthwatering beefy flavored sticks that will have your dog dreaming of treat time. ' WHERE product_id = 21;
+UPDATE product SET details = 'Contains a mouth-moisturizing system that is proven to provide soothing relief for up to 4 hours.' WHERE product_id = 22;
+UPDATE product SET details = 'Turkey Burgers are ready for you to put on the grill, just like regular beef burgers. Make nutritious and tasty burgers with all the fixings and none of the guilt.' WHERE product_id = 23;
+UPDATE product SET details = 'Vitamin A, C and D supplement for exclusively or partially breastfed newborns and infants to support their growing bones and developing immune systems.' WHERE product_id = 24;
+UPDATE product SET details = 'Demand the finer things in life for your pampered cat with this Fancy Feast wet cat food.' WHERE product_id = 26;
+UPDATE product SET details = 'This hand soap is meant to nourish and deeply hydrate your skin while protecting it from skin-damaging free radicals.' WHERE product_id = 27;
+UPDATE product SET details = 'This incredibly versatile vegetable is an excellent accompaniment to a variety of dishes including yummy tacos, burritos, relish, salsa, chowder, and more!' WHERE product_id = 29;
+UPDATE product SET details = 'The secret to our baked ziti with meatballs is the Italian-style meatballs. Mamma Mia!' WHERE product_id = 30;
+UPDATE product SET details = 'Onions, White Pearl. Product of USA.' WHERE product_id = 31;
+UPDATE product SET details = 'WHITE BEAN NACHO CHEESE ARE A SNACK YOU CAN FEEL GREAT ABOUT EATING. CRAFTED OF WHOLE NAVY BEANS, PURE SUNFLOWER OIL, LONG GRAIN RICE, SEA SALT, DELICIOUS SPICES AND SEASONINGS.' WHERE product_id = 32;
+UPDATE product SET details = '100% Durum Wheat Coarse Semolina Pasta, knead with pure spring water, shaped through Bronze Dies, Slowly Dried at Low Temperature.' WHERE product_id = 33;
+UPDATE product SET details = 'Post workout bars made with 20 grams of high quality protein including Whey, Milk Protein, and Almonds to help rebuild your muscles for athletic recovery.' WHERE product_id = 25;
+UPDATE product SET details = 'Peanut Butter Crunch cereal is made whole grains to fill your morning with a deliciously indulgent cereal that satisfies.' WHERE product_id = 34;
+UPDATE product SET details = 'Whether it is breakfast time, snack time or party time, Wheat Chex Cereal delivers simple goodness in every bite.' WHERE product_id = 28;
+UPDATE product SET details = 'This robust sausage is full of Italian flavors including organic oregano, basil, and garlic.' WHERE product_id = 35;
+UPDATE product SET details = 'Traditional Lasagna With Meat Sauce delivers delicious Italian inspired flavors to satisfy your cravings in an easy to make microwave meal that is ready in minutes.' WHERE product_id = 36;
+UPDATE product SET details = 'Our satisfying soups are made with REAL chicken broth and enriched flavorful noodles, and are a great way to please the entire family!' WHERE product_id = 37;
+UPDATE product SET details = 'Ultra Antibacterial dish liquid is approved to kill 99% of bacteria* on dishes, allowing you to wash away more than just baked on grease and giving you peace of mind.' WHERE product_id = 38;
+UPDATE product SET details = 'Made from 100% fruit juice with no added sugar, this is a delicious, easy way for you to ensure your kids get at least one of their daily recommended servings of fruits.' WHERE product_id = 39;
+UPDATE product SET details = 'Smoked and seasoned to perfection and made with pork, turkey and beef, our sausage makes a perfect addition to barbecue and spiced dishes.' WHERE product_id = 40;
+UPDATE product SET details = 'Using the traditional wisdom of generations ago, our artisan bakers use einkorn sourdough to slowly and naturally leaven our new organic crackers.' WHERE product_id = 41;
+UPDATE product SET details = 'Biotin Softgels may help provide your body with nutrients to help maintain your hair, skin, and nail’s health on a daily basis.' WHERE product_id = 42;
+UPDATE product SET details = 'Fresh clementines. Fruits protected with natural wax to maintain freshness. Product of USA.' WHERE product_id = 43;
+UPDATE product SET details = 'Pure water, zillions of tiny bubbles to tingle your taste buds, and great tasting fruit flavor to satisfy cravings.' WHERE product_id = 44;
+UPDATE product SET details = 'Packed with nutritional benefits: low in calories, carbohydrates, sodium, fat, and cholesterol; also provide potassium, fiber, and vitamin C.' WHERE product_id = 45;
+UPDATE product SET details = 'Our cinnamon raisin bagel is delicious topped with a schmear of cream cheese, peanut butter, or some salted butter for a flavor combination you cannot resist.' WHERE product_id = 46;
+UPDATE product SET details = 'ROASTED SEAWEED SNACKS ARE LIGHTLY SEASONED, ROASTED SHEETS OF NORI THAT CAN SATISFY THE MOST SERIOUS SNACK CRAVING.' WHERE product_id = 47;
+UPDATE product SET details = 'Attach items to paper, wood, cloth, pottery, and more with the non-toxic adhesive of Washable School Glue. ' WHERE product_id = 48;
+UPDATE product SET details = 'Our mild Italian sausage is flavorful without being spicy, so it is ideal for sensitive palates.' WHERE product_id = 49;
+UPDATE product SET details = 'With this convenient mix, you can make a loaf of freshly baked bread or 12 delicious muffins.' WHERE product_id = 50;
+
+
+INSERT INTO product (product_id, title, category_id, brand_id, details, image, price, weight, sale) VALUES (51, 'Whole Grain Bread 7 Ancient Grains', 3, 1, 'Whole Grains 100% Whole Wheat bread is baked with the goodness of grains making it a simple choice that supports your goal of living a balanced life!', 'https://i5.walmartimages.com/asr/6ab7880e-b29c-4e8a-8235-c9a106e65cad_1.e9ca96376767b020a24b82c4dec50edd.jpeg?odnWidth=612&odnHeight=612&odnBg=ffffff', 3.00, 17, true);
+INSERT INTO product (product_id, title, category_id, brand_id, details, image, price, weight, sale) VALUES (52, 'Apple Pie', 3, 3, 'Apple Pie is a delicious treat to dig into any day. This pie has a delicious caramel apple filling that is complemented perfectly by its golden, crisp, crumble topping.', 'https://i5.walmartimages.com/asr/32c0f2ca-5f1c-49ed-8ec9-8ab8fe50fd5c.77d27e5139165b89466ca285c77b08bb.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff', 4.00, 24, true);
+INSERT INTO product (product_id, title, category_id, brand_id, details, image, price, weight, sale) VALUES (53, 'Carrot Cake', 3, 4, 'Carrot cake is a delicious dessert with a cup of coffee or a sweet snack any time.', 'https://i5.walmartimages.com/asr/69a0dc6f-f506-45f9-908b-ea0f724fd63c_3.9670efffb69b023bd4b4207f9a6ddbc5.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff', 4.00, 19, true);
+INSERT INTO product (product_id, title, category_id, brand_id, details, image, price, weight, sale) VALUES (54, 'Hanburger Buns', 3, 2, 'Hamburger Buns have a soft texture and a fresh from the bakery taste. They are perfect for backyard barbecues and picnics.', 'https://i5.walmartimages.com/asr/082ecf1c-254a-4151-bc77-c86488333a04_1.71f5e5ffd1266acdff40585d38dd5cf1.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff', 1.00, 11, true);
+INSERT INTO product (product_id, title, category_id, brand_id, details, image, price, weight, sale) VALUES (55, 'Roma Tomatoes', 4, 1, 'Create something wholesome and delicious with Organic Roma Tomatoes. These ripe tomatoes are the ideal ingredient for a variety of tasty dishes.', 'https://i5.walmartimages.com/asr/278b1ac3-a58c-4751-b956-a0d9191c1f7b_2.eafdc16c3e1439337a2b45546dd458d7.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff', 2.00, 16, true);
+INSERT INTO product (product_id, title, category_id, brand_id, details, image, price, weight, sale) VALUES (56, 'Bud Light Beer', 5, 1, 'Bud Light is a premium beer with incredible drinkability that has made it a top selling American beer that everybody knows and loves.', 'https://i5.walmartimages.com/asr/7efdd4c7-1723-4f14-a605-27fd59d2730b.7225f92974344402cf9e557fb3d01bf8.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff', 14.00, 12, true);
+INSERT INTO product (product_id, title, category_id, brand_id, details, image, price, weight, sale) VALUES (57, 'Crown Royal Fine Deluxe Blended Canadian Whisky', 5, 1, 'With a silky texture and hints of oak and sweet vanilla, our 80 proof whisky provides a refined flavor that enhances any cocktail party or celebration.','https://i5.walmartimages.com/asr/74ab2c8b-2384-48df-a22d-543afd9179d4_3.fed82ec1d840bd684fab79d74504bd7e.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff', 22.00, 25, true);
+INSERT INTO product (product_id, title, category_id, brand_id, details, image, price, weight, sale) VALUES (58, 'Dark Horse Cabernet Sauvignon Wine', 5, 1, 'Dark Horse Cabernet Sauvignon Red Wine is a bold, full bodied California wine with a velvety smooth taste and jammy dark fruit aromas.','https://i5.walmartimages.com/asr/0788cb13-c737-4a51-a939-132b1591f6a8_1.33b10e56cf6676dbc8e5848adcb023f3.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff',12.00,25,true);
+INSERT INTO product (product_id, title, category_id, brand_id, details, image, price, weight, sale) VALUES (59, 'Dark Horse Sauvignon Blanc Wine', 5,1,'This California white wine features refreshing notes of grapefruit, melon and citrus for a tropical feel.','https://i5.walmartimages.com/asr/73fec5ef-9cfb-498b-bcea-22e6aefecec7_1.5f28948f84695e8a8f556de6930dc469.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff',12.00,25,true);
+INSERT INTO product (product_id, title, category_id, brand_id, details, image, price, weight, sale) VALUES (60, 'Nongshim Shin Black Spicy Pot-au-feu Noodle Soup', 6,2,'Add rich flavor to your meals with the Nongshim Shin Black Spicy Pot-au-Feu Soup. It is simple and fast to prepare so you can eat it even on a short lunch break.','https://i5.walmartimages.com/asr/6690a73e-60ef-4ae6-a435-77f072d8ea5f_2.b20c028b85a24e68295ba077aaa934f3.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff',1.00,3.5,true);
+INSERT INTO product (product_id, title, category_id, brand_id, details, image, price, weight, sale) VALUES (61, 'Juanitas Foods Menudo', 6, 2, 'Extra Hot Menudo is for those who like it extra spicy and hot. With more hot red chiles and spices added, this Extra Hot Menudo achieves the "fuego" heat you crave.', 'https://i5.walmartimages.com/asr/280ff859-0640-445e-b710-ffc0914a1f97_1.f4912acbd632b0a1dfb7422aceb4c1d0.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff', 4.00, 25, true);
+INSERT INTO product (product_id, title, category_id, brand_id, details, image, price, weight, sale) VALUES (62, 'Kikkoman Traditionally Brewed Soy Sauce', 6,2,' Kikkoman Traditionally Brewed Soy Sauce is a versatile all-purpose seasoning that adds depth and appeal to all kinds of dishes - Asian and beyond.','https://i5.walmartimages.com/asr/68bad404-3f22-416d-aeca-4a66c4b6315d_1.c6551b3fb94349d40630235c38833dc8.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff',5.00,40, true);
+INSERT INTO product (product_id, title, category_id, brand_id, details, image, price, weight, sale) VALUES (63, 'Pedigree Wet Dog Food',8,3,' Wet Dog Food gives dogs the flavors they crave with the nutrition they need.','https://i5.walmartimages.com/asr/339d89ce-5901-4c7a-afe0-0d0a02e095eb_2.a35a9e87a51ca391824745e29f10601f.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff',10.00,3.5,true);
+INSERT INTO product (product_id, title, category_id, brand_id, details, image, price, weight, sale) VALUES (64, 'Wild Harvest Mouse and Rat Premium Daily Blend Food', 8,3, 'Using natural ingredients, Wild Harvest provides the perfect blend of food and treats to meet the distinct dietary needs of birds and small animals.', 'https://i5.walmartimages.com/asr/53b5c945-eb94-484f-8e36-cae91e2f11b6_1.390944b57ef25e08ef34baf1592a97d8.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff', 3.00, 24, true);
+INSERT INTO product (product_id, title, category_id, brand_id, details, image, price, weight, sale) VALUES (65, 'SPAM Classic', 15,4,'Don’t knock it till you’ve fried it! SPAM® Classic is the original and timeless spiced meat that’s brought a delicious taste of variety for generations.','https://i5.walmartimages.com/asr/4194c440-0ccc-4ab0-a9e5-733e8a793307.e1814ffb2c6202c2405807fdbdcc2247.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff',3.00, 12,true);
+INSERT INTO product (product_id, title, category_id, brand_id, details, image, price, weight, sale) VALUES (66, 'Pineapple Chunks', 15, 4, 'Our pineapple chunks are served in 100% pineapple juice with no added sugars, making them a healthier option than fruit soaked in heavy syrup.','https://i5.walmartimages.com/asr/46f32e91-97a9-4797-b1c7-b57a34f0dc7f_2.0b84103df269f7473d0fc40ea01d54b9.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff', 1.00, 20, true);
+INSERT INTO product (product_id, title, category_id, brand_id, details, image, price, weight, sale) VALUES (67, 'Whole Milk', 16,5,'This Grade A quality milk is pasteurized and delivers fresh from the farm taste.','https://i5.walmartimages.com/asr/83f533c3-3234-4bea-80bf-a0f9a43cd279_2.9b223f40bab27c513ba64f9f0e3fc2d9.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff',3.00,128,true);
+INSERT INTO product (product_id, title, category_id, brand_id, details, image, price, weight, sale) VALUES (68, 'Deli Style Sliced Colby & Monterey Jack Cheese', 16,5,'Elevate your next epic sandwich with a couple of slices of Deli Style Sliced Colby & Monterey Jack Cheese.','https://i5.walmartimages.com/asr/db83e5cc-275d-4223-862e-32cf9813d5dc_1.fd6757467b6ba1551f7ce61aad995561.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff',2.00,8,true);
+INSERT INTO product (product_id, title, category_id, brand_id, details, image, price, weight, sale) VALUES (69, 'Vanilla Soy Milk', 16,5,'Our vanilla soymilk is the perfect substitute for traditional milk in all your favorite dairy-laden dishes.','https://i5.walmartimages.com/asr/d579fbc5-40e6-4d88-99f9-8372f850e8eb_1.431d6b4f213ab47fc76250d78751ea5c.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff',2.00,64,true);
+INSERT INTO product (product_id, title, category_id, brand_id, details, image, price, weight, sale) VALUES (70, 'Low Splash Bleach', 17, 1, ' Bleach is great for a cleaner, fresher household and laundry. It is designed to work with most standard HE washers and will keep your whites bright as it fights tough to remove stains.', 'https://i5.walmartimages.com/asr/cb6abb36-87a6-4050-a540-86d4b143c9c8_1.5ed441d3fddd5a48bb9d72954af82503.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff', 2.00, 43, true);
+
+DELETE FROM category WHERE category_id = 2;
+DELETE FROM category WHERE category_id = 20;
+DELETE FROM category WHERE category_id = 21;
+DELETE FROM category WHERE category_id = 10;
+DELETE FROM category WHERE category_id = 18;
+DELETE FROM category WHERE category_id = 14;
+
+
+COMMIT TRANSACTION;
